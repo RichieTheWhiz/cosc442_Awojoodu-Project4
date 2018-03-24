@@ -37,21 +37,20 @@ public class CoffeeMakerProduct {
 			if (r.equals(recipeArray[i])) {
 				canAddRecipe = false;
 			}
-		
-		if (canAddRecipe) {
-			int emptySpot = emptySpot();
+			if (canAddRecipe) {
+			 int emptySpot = emptySpot();
 //			for (int i = 0; i < NUM_RECIPES; i++) {
 				if (!recipeFull[i]) {
 					canAddRecipe = true;
 				}
 //			}
-			if (emptySpot != -1) {
-				recipeArray[emptySpot] = r;
-				recipeFull[emptySpot] = true;
-			} else {
-				canAddRecipe = false;
-			}
-		}
+				if (emptySpot != -1) {
+					recipeArray[emptySpot] = r;
+				    recipeFull[emptySpot] = true;
+			    } else {
+				    canAddRecipe = false;
+			    }
+		 }
 		}
 		return canAddRecipe;
 	}
