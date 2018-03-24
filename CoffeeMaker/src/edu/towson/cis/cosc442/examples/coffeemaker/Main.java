@@ -1,3 +1,4 @@
+// $codepro.audit.disable
 package edu.towson.cis.cosc442.examples.coffeemaker;
 
 import java.io.BufferedReader;

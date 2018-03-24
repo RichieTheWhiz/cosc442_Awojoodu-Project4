@@ -1,3 +1,4 @@
+// $codepro.audit.disable appendString, platformSpecificLineSeparator
 package edu.towson.cis.cosc442.examples.coffeemaker;
 
 /**
@@ -125,10 +126,19 @@ public class Inventory {
      * @return String
      */
     public String toString() {
-    	return "Coffee: " + getCoffee() + "\n" +
-			"Milk: " + getMilk() + "\n" +
-			"Sugar: " + getSugar() + "\n" +
-			"Chocolate: " + getChocolate() + "\n";
+    	StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("Coffee: ");
+		stringBuilder.append(getCoffee());
+		stringBuilder.append("Milk: ");
+		stringBuilder.append(getMilk());
+		stringBuilder.append("\n");
+		stringBuilder.append("Sugar: ");
+		stringBuilder.append(getSugar());
+	    stringBuilder.append("\n"); // $codepro.audit.disable platformSpecificLineSeparator
+		stringBuilder.append("Chocolate: ");
+		stringBuilder.append(getChocolate());
+		stringBuilder.append("\n"); // $codepro.audit.disable platformSpecificLineSeparator
+		return stringBuilder.toString();
     }
 
 	/**
