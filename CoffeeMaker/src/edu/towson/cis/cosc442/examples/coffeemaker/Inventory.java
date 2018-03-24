@@ -130,4 +130,29 @@ public class Inventory {
 			"Sugar: " + getSugar() + "\n" +
 			"Chocolate: " + getChocolate() + "\n";
     }
+
+	/**
+	 * Returns the change of a user's beverage purchase, or the user's money if the beverage cannot be made
+	 * @param r
+	 * @param amtPaid
+	 * @return  int 
+	 */
+	public int makeCoffee(Recipe r, int amtPaid) {
+		boolean canMakeCoffee = true;
+		if (amtPaid < r.getPrice()) {
+			canMakeCoffee = false;
+		}
+		if (!enoughIngredients(r)) {
+			canMakeCoffee = false;
+		}
+		if (canMakeCoffee) {
+			setCoffee(getCoffee() + r.getAmtCoffee());
+			setMilk(getMilk() - r.getAmtMilk());
+			setSugar(getSugar() - r.getAmtSugar());
+			setChocolate(getChocolate() - r.getAmtChocolate());
+			return amtPaid - r.getPrice();
+		} else {
+			return amtPaid;
+		}
+	}
 }

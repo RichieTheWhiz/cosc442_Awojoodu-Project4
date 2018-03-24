@@ -6,88 +6,63 @@ package edu.towson.cis.cosc442.examples.coffeemaker;
  * @version $Revision: 1.0 $
  */
 public class Recipe {
-    private String name;
-    private int price;
-    private int amtCoffee;
-    private int amtMilk;
-    private int amtSugar;
-    private int amtChocolate;
-    
+    private RecipeProduct recipeProduct = new RecipeProduct();
+	private String name;
     /**
      * Method getAmtChocolate.
      * @return int
      */
     public int getAmtChocolate() {
-        return amtChocolate;
+        return recipeProduct.getAmtChocolate();
     }
     /**
      * Method setAmtChocolate.
      * @param amtChocolate int
      */
     public void setAmtChocolate(int amtChocolate) {
-    	if(amtChocolate >= 0) {
-    		this.amtChocolate = amtChocolate;
-    	}
-    	else {
-    		this.amtChocolate = 0;
-    	}
+    	recipeProduct.setAmtChocolate(amtChocolate);
     }
     /**
      * Method getAmtCoffee.
      * @return int
      */
     public int getAmtCoffee() {
-        return amtCoffee;
+        return recipeProduct.getAmtCoffee();
     }
     /**
      * Method setAmtCoffee.
      * @param amtCoffee int
      */
     public void setAmtCoffee(int amtCoffee) {
-    	if(amtCoffee >= 0) {
-    		this.amtCoffee = amtCoffee;
-    	}
-    	else {
-    		this.amtCoffee = 0;
-    	}
+    	recipeProduct.setAmtCoffee(amtCoffee);
     }
     /**
      * Method getAmtMilk.
      * @return int
      */
     public int getAmtMilk() {
-        return amtMilk;
+        return recipeProduct.getAmtMilk();
     }
     /**
      * Method setAmtMilk.
      * @param amtMilk int
      */
     public void setAmtMilk(int amtMilk) {
-    	if(amtMilk >= 0) {
-    		this.amtMilk = amtMilk;
-    	}
-    	else {
-    		this.amtMilk = 0;
-    	}
+    	recipeProduct.setAmtMilk(amtMilk);
     }
     /**
      * Method getAmtSugar.
      * @return int
      */
     public int getAmtSugar() {
-        return amtSugar;
+        return recipeProduct.getAmtSugar();
     }
     /**
      * Method setAmtSugar.
      * @param amtSugar int
      */
     public void setAmtSugar(int amtSugar) {
-    	if(amtSugar >= 0) {
-    		this.amtSugar = amtSugar;
-    	}
-    	else {
-    		this.amtSugar = 0;
-    	}
+    	recipeProduct.setAmtSugar(amtSugar);
     }
     /**
      * Method getName.
@@ -108,19 +83,14 @@ public class Recipe {
      * @return int
      */
     public int getPrice() {
-        return price;
+        return recipeProduct.getPrice();
     }
     /**
      * Method setPrice.
      * @param price int
      */
     public void setPrice(int price) {
-    	if(price >= 0) {
-    		this.price = price;
-    	}
-    	else {
-    		this.price = 0;
-    	}
+    	recipeProduct.setPrice(price);
     } 
     /**
      * Method equals.
