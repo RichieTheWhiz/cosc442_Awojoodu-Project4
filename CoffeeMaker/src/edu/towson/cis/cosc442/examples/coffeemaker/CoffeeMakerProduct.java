@@ -39,11 +39,11 @@ public class CoffeeMakerProduct {
 			}
 			if (canAddRecipe) {
 			 int emptySpot = emptySpot();
-//			for (int i = 0; i < NUM_RECIPES; i++) {
-				if (!recipeFull[i]) {
+			for (int i1 = 0; i1 < NUM_RECIPES; i1++) {
+				if (!recipeFull[i1]) {
 					canAddRecipe = true;
 				}
-//			}
+			}
 				if (emptySpot != -1) {
 					recipeArray[emptySpot] = r;
 				    recipeFull[emptySpot] = true;

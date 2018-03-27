@@ -94,6 +94,8 @@ public class Main {
         
         boolean recipeDeleted = coffeeMaker.deleteRecipe(recipes[recipeToDelete]);
         
+        if(recipeDeleted)
+        	recipes[recipeToDelete] =null;
         if(recipeDeleted) System.out.println(recipes[recipeToDelete].getName() + " successfully deleted.");
 	    else System.out.println(recipes[recipeToDelete].getName() + "could not be deleted.");
         
